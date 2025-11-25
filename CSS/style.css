@@ -13,7 +13,7 @@ body{
 }
 :root{
 
-    --amrelo:#ffe600;
+    --amrelo:#6e6e6e;
     --verde:#2f9364;
     --laranja:#ff7c37;
     --degrade-bnt:linear-gradient(#525252, #6b6b6b);
@@ -58,4 +58,33 @@ nav{
 }
 .ul li a{
     color: black;
+}
+/*main*/
+
+main .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.main-text{
+    width: 50%;
+    color: white;
+}
+
+.main-text h1{
+    font-size: 3rem;
+}
+
+.main-text div{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main-img{
+    width: 70%;
+}
+.main-img{
+    width: 70%;
 }
