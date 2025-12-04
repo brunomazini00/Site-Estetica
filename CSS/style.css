@@ -13,7 +13,7 @@ body{
 }
 :root{
 
-    --amrelo:#6e6e6e;
+    --amrelo:#868686;
     --verde:#2f9364;
     --laranja:#ff7c37;
     --degrade-bnt:linear-gradient(#525252, #6b6b6b);
@@ -27,8 +27,8 @@ body{
 
 .container{
         max-width:1440px;
-        padding: 0 5%;
-        margin: 0 auto;
+        padding: 0px 0%;
+        margin: 0px 50px ;
 }   
 .btn-gradiente{
     padding: 10px 25px;
@@ -41,7 +41,7 @@ nav{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 0;
+        padding: 10px 0;
 }
 .logo a{
     font-size: 30px;
@@ -49,12 +49,17 @@ nav{
     color: black;
 }
 .ul{
-        display: flex;
-        align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 30px;   /* espaçamento entre itens */
+    white-space: nowrap;
+          
 }
 .ul li{
-    margin: 0 35px;
+    margin: 0 25px
     font-size: 15px;
+      align-self: flex-end;
+  
 }
 .ul li a{
     color: black;
@@ -65,11 +70,12 @@ main .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 .main-text{
-    width: 50%;
-    color: white;
+    flex: 1 1 400px;  /* flexível: cresce e diminui */
+    max-width: 600px;
 }
 
 .main-text h1{
@@ -79,12 +85,40 @@ main .container{
 .main-text div{
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .main-img{
-    width: 70%;
+    flex: 1 1 400px;  /* flexível: cresce e diminui */
+    max-width: 600px;
+    
 }
-.main-img{
-    width: 70%;
+/* ======== MOBILE ======== */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ul {
+        flex-wrap: wrap;     /* permite quebrar linha */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .main-text, .main-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    main .container {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    .main-text h1 {
+        font-size: 2rem;
+    }
 }
